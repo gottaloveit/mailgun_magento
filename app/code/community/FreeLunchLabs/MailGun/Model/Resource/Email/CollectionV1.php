@@ -1,6 +1,6 @@
 <?php
 
-class FreeLunchLabs_MailGun_Model_Resource_Email_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
+class FreeLunchLabs_MailGun_Model_Resource_Email_CollectionV1 extends Mage_Core_Model_Resource_Db_Collection_Abstract
 {
     protected function _construct()
     {
