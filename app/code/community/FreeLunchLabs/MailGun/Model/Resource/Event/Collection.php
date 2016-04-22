@@ -1,11 +1,11 @@
 <?php
 
-class FreeLunchLabs_MailGun_Model_Resource_Event_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
-{
-    protected function _construct()
+if (version_compare(Mage::getVersion(), '1.10', '>=')) {
+    class FreeLunchLabs_MailGun_Model_Resource_Event_Collection extends FreeLunchLabs_MailGun_Model_Resource_Event_CollectionV2
     {
-        parent::_construct();
-
-        $this->_init('freelunchlabs_mailgun/event');
     }
+} else {
+    class FreeLunchLabs_MailGun_Model_Resource_Event_Collection extends FreeLunchLabs_MailGun_Model_Resource_Event_CollectionV1
+    {
+    }    
 }
